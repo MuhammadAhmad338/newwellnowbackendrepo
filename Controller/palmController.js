@@ -14,7 +14,7 @@ const palmController = async (req, res) => {
   const { prompt } = req.body;
   try {
     let messages = [{ content: `Provide detailed information on the following drug: ${prompt}. 
-    Include its effects, side effects, usage instructions, and alternate drugs.` }];
+    Include its effects, side effects, usage instructions, and alternate drugs. Give the answer in titles` }];
 
     const result = await client.generateMessage({
       model: MODEL_NAME,
